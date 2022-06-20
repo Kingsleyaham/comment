@@ -27,7 +27,7 @@ mongoose
 
 // middlewares and static files
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static("build"));
 
 app.use(bodyParser.json());
 app.use(
