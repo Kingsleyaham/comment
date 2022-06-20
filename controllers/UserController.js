@@ -15,7 +15,7 @@ function fileFilter(req, file, cb) {
 }
 
 const storage = multer.diskStorage({
-  destination: "./../public/img/avatars/",
+  destination: "./build/img/avatars/",
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
     const ext = file.mimetype.split("/")[1];

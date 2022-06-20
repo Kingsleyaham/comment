@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const commentRoute = require("./routes/comment");
 const userRoute = require("./routes/user");
+const path = require("path");
 
 const app = express();
 
@@ -27,7 +28,8 @@ mongoose
 
 // middlewares and static files
 
-app.use(express.static("build"));
+// app.use(express.static("build"));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use(bodyParser.json());
 app.use(
