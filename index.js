@@ -27,10 +27,7 @@ mongoose
 
 // middlewares and static files
 
-// app.use(express.static(path.join(__dirname, 'build')));
-// app.get('/*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use(bodyParser.json());
 app.use(
@@ -43,6 +40,10 @@ app.use(
 app.use("/api/comment", commentRoute);
 app.use("/api/user", userRoute);
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
+
+// app.get("/", (req, res) => {
+//   res.send("Hello World");
+// });
