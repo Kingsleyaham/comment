@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Kingsleyaham/comment)
-- Live Site URL: [comment-app](https://nodejs-react-comment-app.herokuapp.com/)
+- Live Site URL: [comment-app](https://nodejs-comment-app.onrender.com/)
 
 ## My process
 
